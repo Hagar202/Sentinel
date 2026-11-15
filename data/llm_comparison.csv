@@ -1,0 +1,4 @@
+method,phishing_emails,normal_emails,detection_rate,false_alarm_rate,precision,accuracy,avg_seconds
+Rules + ML,10,10,0.8,0.0,1.0,0.9,0.00858
+LLM agent,10,10,0.9,0.0,1.0,0.95,16.29
+LLM agent + guardrail,10,10,0.9,0.0,1.0,0.95,16.29

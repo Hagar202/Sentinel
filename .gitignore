@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+# runtime files (keep the evaluation results the web app shows)
+data/*
+!data/llm_comparison.csv
+!data/llm_comparison_emails.csv
+.pytest_cache/
+node_modules/

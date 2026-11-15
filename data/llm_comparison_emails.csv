@@ -1,0 +1,21 @@
+email,truth,rules,llm,llm_guardrail,tools_used,rules_seconds,seconds
+sample-12787.eml,phishing,phishing,phishing,phishing,6,0.011,10.8
+sample-12843.eml,phishing,suspicious,phishing,phishing,6,0.01,10.6
+sample-12684.eml,phishing,suspicious,phishing,phishing,7,0.0151,10.3
+sample-12669.eml,phishing,suspicious,phishing,phishing,6,0.004,10.9
+sample-91.eml,phishing,safe,safe,safe,6,0.0261,70.4
+sample-111.eml,phishing,safe,phishing,phishing,6,0.0268,15.2
+sample-12844.eml,phishing,suspicious,phishing,phishing,7,0.0089,10.9
+sample-12801.eml,phishing,suspicious,phishing,phishing,7,0.0059,11.9
+sample-12756.eml,phishing,phishing,phishing,phishing,6,0.006,10.1
+sample-12752.eml,phishing,suspicious,phishing,phishing,6,0.0151,10.1
+"revison # 1 - enron / hpl actuals for november 10 - 12 , 200",normal,safe,safe,safe,5,0.0019,8.9
+re : hib visa application - sevil yaman,normal,safe,safe,safe,5,0.0111,67.5
+california update 9 - 06 - 2001,normal,safe,safe,safe,5,0.002,9.6
+old email address,normal,safe,safe,safe,5,0.0029,8.7
+enron capitalism,normal,safe,safe,safe,5,0.002,9.4
+re : project tracking database access,normal,safe,safe,safe,5,0.0109,8.8
+article : ' enron vows to stay with baltic online row ',normal,safe,safe,safe,5,0.0028,8.7
+re : raptors,normal,safe,safe,safe,5,0.004,15.5
+re : noms / actual vols for 5 / 18 thru 5 / 20,normal,safe,safe,safe,5,0.0031,8.9
+re : private firm schedule,normal,safe,safe,safe,5,0.002,8.6

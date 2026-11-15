@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* Dark mode is switched by adding the "dark" class on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Design tokens: one place for every color, light and dark */
+:root {
+  --bg: #f6f7fb;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-solid: #ffffff;
+  --surface-2: rgba(234, 237, 247, 0.8);
+  --line: #e4e7f0;
+  --fg: #0f1424;
+  --muted: #69718a;
+  --accent: #6d5dfc;
+}
+.dark {
+  --bg: #080b14;
+  --surface: rgba(17, 22, 42, 0.62);
+  --surface-solid: #10152a;
+  --surface-2: rgba(30, 38, 66, 0.6);
+  --line: rgba(130, 145, 200, 0.16);
+  --fg: #e8ebf5;
+  --muted: #8b93ad;
+  --accent: #8b7cff;
+}
+
+@theme {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-solid: var(--surface-solid);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-danger: #f25c69;
+  --color-warn: #f5a524;
+  --color-ok: #22c993;
+  --color-info: #38bdf8;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-arabic: "IBM Plex Sans Arabic", "Segoe UI", sans-serif;
+}
+
+html, body, #root { height: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+
+/* Background: a faint dot grid + three slowly moving colour blobs */
+body { background-image: radial-gradient(color-mix(in srgb, var(--muted) 22%, transparent) 1px, transparent 1px); background-size: 28px 28px; }
+.aurora { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.aurora span { position: absolute; width: 42vw; height: 42vw; border-radius: 50%; filter: blur(110px); opacity: .35; animation: drift 22s ease-in-out infinite alternate; }
+.aurora span:nth-child(1) { background: #7c5cff; top: -18vw; left: -8vw; }
+.aurora span:nth-child(2) { background: #00c2ff; top: 10vw; right: -14vw; animation-delay: -7s; opacity: .22; }
+.aurora span:nth-child(3) { background: #ff4f8b; bottom: -24vw; left: 30vw; animation-delay: -14s; opacity: .18; }
+:root:not(.dark) .aurora span { opacity: .16; }
+@keyframes drift { to { transform: translate(6vw, 4vw) scale(1.15); } }
+
+/* Big headline with a gradient */
+.headline { background: linear-gradient(100deg, var(--fg) 30%, var(--accent) 75%, #00c2ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* Cards fade up when a page opens */
+.rise { animation: rise .5s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+select option { background: var(--surface-solid); }
+
+/* Recharts tooltip */
+.recharts-default-tooltip { background: var(--surface-solid) !important; border: 1px solid var(--line) !important; border-radius: 10px; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 10px; }

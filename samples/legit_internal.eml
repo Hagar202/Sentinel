@@ -1,0 +1,20 @@
+Return-Path: <hr@sentinel-demo.com>
+Authentication-Results: mx.sentinel-demo.com; spf=pass smtp.mailfrom=sentinel-demo.com; dkim=pass header.d=sentinel-demo.com; dmarc=pass header.from=sentinel-demo.com
+From: "HR Team" <hr@sentinel-demo.com>
+To: all@sentinel-demo.com
+Subject: Notes from today's team meeting
+Date: Sun, 01 Nov 2026 14:00:00 +0200
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Hi everyone,
+
+Thanks for joining today's meeting. Here is a short summary:
+- The office will close early on Thursday for maintenance.
+- Please submit your vacation plans for December by the 20th.
+- Team lunch is on Sunday at 1 PM.
+
+The full notes are on the shared drive.
+
+Best,
+HR Team
